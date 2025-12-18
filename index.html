@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FakeGuard AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Animated Grid -->
+<div class="grid-bg"></div>
+
+<div class="container">
+
+    <header>
+        <h1>FAKE<span>GUARD</span> AI</h1>
+        <p>Instagram Threat Intelligence System</p>
+    </header>
+
+    <section class="panel">
+        <input type="text" id="username" placeholder="Instagram Username">
+        <button onclick="scan()">Initialize Scan</button>
+    </section>
+
+    <section class="radar">
+        <div class="circle"></div>
+        <div class="sweep"></div>
+        <span>AI RADAR</span>
+    </section>
+
+    <section class="logs" id="logs">
+        <p>> Waiting for input...</p>
+    </section>
+
+    <section class="result" id="result">
+        <h2 id="status"></h2>
+        <div class="threat" id="threat"></div>
+    </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

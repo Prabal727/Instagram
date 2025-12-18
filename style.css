@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron', sans-serif;
+}
+body{
+    background:#000;
+    color:#0f0;
+    overflow:hidden;
+}
+
+/* Grid Background */
+.grid-bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+        linear-gradient(#0f03 1px, transparent 1px),
+        linear-gradient(90deg, #0f03 1px, transparent 1px);
+    background-size:40px 40px;
+    animation:moveGrid 10s linear infinite;
+    z-index:-1;
+}
+@keyframes moveGrid{
+    from{background-position:0 0;}
+    to{background-position:40px 40px;}
+}
+
+.container{
+    padding:30px;
+    max-width:600px;
+    margin:auto;
+}
+
+/* Header */
+header h1{
+    font-size:36px;
+}
+header span{
+    color:#ff004c;
+}
+header p{
+    font-size:12px;
+    opacity:0.7;
+}
+
+/* Panel */
+.panel{
+    margin:20px 0;
+}
+.panel input{
+    width:100%;
+    padding:12px;
+    background:#000;
+    border:1px solid #0f0;
+    color:#0f0;
+}
+.panel button{
+    margin-top:10px;
+    width:100%;
+    padding:12px;
+    background:#0f0;
+    color:#000;
+    border:none;
+    cursor:pointer;
+}
+
+/* Radar */
+.radar{
+    position:relative;
+    width:220px;
+    height:220px;
+    border:2px solid #0f0;
+    border-radius:50%;
+    margin:30px auto;
+}
+.circle{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    animation:pulse 2s infinite;
+}
+@keyframes pulse{
+    0%{box-shadow:0 0 0 0 #0f05;}
+    100%{box-shadow:0 0 0 30px transparent;}
+}
+.sweep{
+    position:absolute;
+    width:50%;
+    height:2px;
+    background:#0f0;
+    top:50%;
+    left:50%;
+    transform-origin:left;
+    animation:sweep 2s linear infinite;
+}
+@keyframes sweep{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+.radar span{
+    position:absolute;
+    bottom:-25px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:12px;
+}
+
+/* Logs */
+.logs{
+    background:#000;
+    border:1px solid #0f0;
+    padding:15px;
+    height:120px;
+    overflow:hidden;
+    font-size:12px;
+}
+
+/* Result */
+.result{
+    display:none;
+    margin-top:20px;
+}
+.threat{
+    font-size:48px;
+    color:#ff004c;
+}
